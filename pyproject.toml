@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "uwsgi-spooler"
+version = "0.1.0"
+description = ""
+authors = ["SudheerVgts <sudheer@vishgyana.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.1.1"
+
+
+[tool.poetry.group.server.dependencies]
+uwsgi = "^2.0.27"
+uwsgidecorators = "^1.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
