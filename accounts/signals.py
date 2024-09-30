@@ -9,4 +9,4 @@ from .background_runs import log_user_changes
 @receiver(post_save, sender=User)
 def post_save_user(sender, instance, created, **kwargs):
     if not created:
-        log_user_changes(user_obj=instance)
+        log_user_changes(user_obj=instance, priority=b'1')
