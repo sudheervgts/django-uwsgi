@@ -29,7 +29,8 @@ except (ImportError, ModuleNotFoundError):
 
 @spool(pass_arguments=True)
 def log_user_changes(user_obj, **kwargs):
-    time.sleep(10)
+
     with open('users.txt', 'a') as file:
         file.write(f'{user_obj.get_full_name()} has been Updated his profile at {datetime.now()}\n')
+    time.sleep(10)
     return SPOOL_OK
